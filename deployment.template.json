@@ -39,7 +39,7 @@
               }
           },
             "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-hub:1.0",
+              "image": "mcr.microsoft.com/azureiotedge-hub:1.0.9-rc2",
               "createOptions": {
                 "HostConfig": {
                   "PortBindings": {
@@ -87,6 +87,16 @@
             "restartPolicy": "always",
             "settings": {
               "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0",
+              "createOptions": {}
+            }
+          },
+          "MetricsCollector": {
+            "version": "1.0",
+            "type": "docker",
+            "status": "running",
+            "restartPolicy": "always",
+            "settings": {
+              "image": "veyalla/metricscollector:0.0.4-amd64",
               "createOptions": {}
             }
           }
