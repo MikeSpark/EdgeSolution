@@ -98,6 +98,10 @@
             "settings": {
               "image": "veyalla/metricscollector:0.0.4-amd64",
               "createOptions": {}
+            },
+            "env": {
+              "AzMonWorkspaceId": {"value": "045f544d-4e5b-4b10-806e-32005306b043"},
+              "AzMonWorkspaceKey": {"value": "bjLK/joqElFRnHf3R6baqrqBa4ZGGbXyW2BemdxGtgvh6cuGsxWUHCvRQrFnXn2IVB321Owiu3Jjiu1nBTxX8Q=="}
             }
           }
         }
