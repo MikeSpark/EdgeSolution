@@ -11,8 +11,8 @@
             "loggingOptions": "",
             "registryCredentials": {
               "mikechanacr": {
-                "username": "$CONTAINER_REGISTRY_USERNAME_mikechanacr",
-                "password": "$CONTAINER_REGISTRY_PASSWORD_mikechanacr",
+                "username": "mikechanacr",
+                "password": "qrWFkYaV/Q8SL9FRPWQSrx/QvMnbNUQL",
                 "address": "mikechanacr.azurecr.io"
               }
             }
