@@ -114,6 +114,17 @@
           "timeToLiveSecs": 7200
         }
       }
+    },
+    "MetricsCollector": {
+      "properties.desired": {
+      "schemaVersion": "1.0",
+      "scrapeFrequencySecs": 300,
+      "metricsFormat": "Json",
+      "syncTarget": "AzureLogAnalytics",
+      "endpoints": {
+          "edgeHub": "http://edgeHub:9600/metrics"
+      }
+    }
     }
   }
 }
