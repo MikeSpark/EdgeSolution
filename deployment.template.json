@@ -6,17 +6,6 @@
         "schemaVersion": "1.0",
         "runtime": {
           "type": "docker",
-          "env": {
-            "ExperimentalFeatures__Enabled": {
-                "value": true
-            },
-            "ExperimentalFeatures__EnableUploadLogs": {
-                "value": true
-            },
-            "ExperimentalFeatures__EnableGetLogs": {
-              "value": true
-            }
-          },
           "settings": {
             "minDockerVersion": "v1.25",
             "loggingOptions": "",
@@ -33,8 +22,19 @@
           "edgeAgent": {
             "type": "docker",
             "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-agent:1.0",
+              "image": "mcr.microsoft.com/azureiotedge-agent:1.0.9",
               "createOptions": {}
+            },
+            "env": {
+              "experimentalfeatures__enabled": {
+                  "value": true
+              },
+              "experimentalfeatures__enableUploadLogs": {
+                  "value": true
+              },
+              "experimentalfeatures__enableGetLogs": {
+                "value": true
+              }
             }
           },
           "edgeHub": {
