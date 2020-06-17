@@ -101,6 +101,24 @@
               "createOptions": {}
             }
           },
+          "logspout": {
+            "settings": {
+                "image": "veyalla/logspout-loganalytics:linux-amd64",
+                "createOptions": 
+                {"env":[
+                  "BACKLOG=false",
+                  "LOGSPOUT=ignore",
+                  "LOGANALYTICS_WORKSPACE_ID=045f544d-4e5b-4b10-806e-32005306b043","LOGANALYTICS_WORKSPACE_SECRET=bcwM976IXC97e+EprN1QxIzcCbK8sYw+ndIS6o/CMFCS075bDs3hOaZ2ofu6m6gtySn4ovu3B0SJxYzHadRfrw=="],
+                "cmd":[
+                  "loganalytics://"],
+                "HostConfig":{"Binds":["/var/run/docker.sock:/var/run/docker.sock"]}
+                  }
+            },
+            "type": "docker",
+            "status": "running",
+            "restartPolicy": "always",
+            "version": "1.0"
+            },
           "MetricsCollector": {
             "version": "1.0",
             "type": "docker",
