@@ -123,23 +123,6 @@
               "AzMonWorkspaceId": {"value": "045f544d-4e5b-4b10-806e-32005306b043"},
               "AzMonWorkspaceKey": {"value": "bjLK/joqElFRnHf3R6baqrqBa4ZGGbXyW2BemdxGtgvh6cuGsxWUHCvRQrFnXn2IVB321Owiu3Jjiu1nBTxX8Q=="}
             }
-          },
-          "Heartbeat": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "${MODULES.Watchdog}",
-              "createOptions": {
-                "Env": [
-                  "DEVICE_NAME=anewhope",
-                  "START_WINDOW_IN_SECONDS=$START_WINDOW_IN_SECONDS",
-                  "END_WINDOW_IN_SECONDS=$END_WINDOW_IN_SECONDS",
-                  "BEAT_FREQUENCY_IN_SECONDS=$BEAT_FREQUENCY_IN_SECONDS"
-                ]
-              }
-            }
           }
         }
       }
