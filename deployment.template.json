@@ -103,16 +103,7 @@
           },
           "logspout": {
             "settings": {
-                "image": "veyalla/logspout-loganalytics:linux-amd64",
-                "createOptions": 
-                {"env":[
-                  "BACKLOG=false",
-                  "LOGSPOUT=ignore",
-                  "LOGANALYTICS_WORKSPACE_ID=045f544d-4e5b-4b10-806e-32005306b043","LOGANALYTICS_WORKSPACE_SECRET=bcwM976IXC97e+EprN1QxIzcCbK8sYw+ndIS6o/CMFCS075bDs3hOaZ2ofu6m6gtySn4ovu3B0SJxYzHadRfrw=="],
-                "cmd":[
-                  "loganalytics://"],
-                "HostConfig":{"Binds":["/var/run/docker.sock:/var/run/docker.sock"]}
-                  }
+                "image": "veyalla/logspout-loganalytics:linux-amd64"
             },
             "type": "docker",
             "status": "running",
@@ -131,6 +122,23 @@
             "env": {
               "AzMonWorkspaceId": {"value": "045f544d-4e5b-4b10-806e-32005306b043"},
               "AzMonWorkspaceKey": {"value": "bjLK/joqElFRnHf3R6baqrqBa4ZGGbXyW2BemdxGtgvh6cuGsxWUHCvRQrFnXn2IVB321Owiu3Jjiu1nBTxX8Q=="}
+            }
+          },
+          "Heartbeat": {
+            "version": "1.0",
+            "type": "docker",
+            "status": "running",
+            "restartPolicy": "always",
+            "settings": {
+              "image": "${MODULES.Watchdog}",
+              "createOptions": {
+                "Env": [
+                  "DEVICE_NAME=anewhope",
+                  "START_WINDOW_IN_SECONDS=$START_WINDOW_IN_SECONDS",
+                  "END_WINDOW_IN_SECONDS=$END_WINDOW_IN_SECONDS",
+                  "BEAT_FREQUENCY_IN_SECONDS=$BEAT_FREQUENCY_IN_SECONDS"
+                ]
+              }
             }
           }
         }
